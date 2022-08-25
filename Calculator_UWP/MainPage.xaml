@@ -13,8 +13,8 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="100"></RowDefinition>
-            <RowDefinition Height="200"></RowDefinition>
-            <RowDefinition Height="300"></RowDefinition>
+            <RowDefinition Height="80"></RowDefinition>
+            <RowDefinition Height="350"></RowDefinition>
             <RowDefinition Height="200"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -23,28 +23,32 @@
 
 
 
-        <Image x:Name="image" Source ="IMG/1.png" Grid.Row="0" HorizontalAlignment="Left" Height="91" VerticalAlignment="Top" Width="129" Margin="0,2,0,0"/>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="140,11,0,0" Text="Стандартный калькулятор, Поддерживаемые операции +, -, *, /, ()" TextWrapping="Wrap" VerticalAlignment="Top" Height="90" Width="221"/>
+        <Image x:Name="image" Source ="IMG/1.png" Grid.Row="0" HorizontalAlignment="Left" Height="95" VerticalAlignment="Top" Width="140" Margin="0,5,0,0"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="140,5,0,0" Text="Стандартный калькулятор, Поддерживаемые операции +, -, *, /, ()" TextWrapping="Wrap" VerticalAlignment="Top" Height="95" Width="260"/>
 
-        <Button  x:Name="button_plus" Grid.Row="2" Content="+" Margin="28,17,0,0" VerticalAlignment="Top" Height="49" Width="73"/>
-        <Button  x:Name="button_multiply" Content="*" Grid.Row="2"  Margin="121,18,0,0"  VerticalAlignment="Top" Height="48" Width="74" RenderTransformOrigin="-0.053,0.518"/>
-        <Button x:Name="button_divide" Content="/" Grid.Row="2"  Margin="213,20,0,0"  VerticalAlignment="Top" Height="42" Width="66"/>
+        <Button  x:Name="button_plus" Grid.Row="2" Content="+" Margin="240,120,0,0" VerticalAlignment="Top" Height="49" Width="73" Click="button_plus_Click"/>
+        <Button  x:Name="button_multiply" Content="*" Grid.Row="2"  Margin="240,5,0,0"  VerticalAlignment="Top" Height="49" Width="73" Click="button_multiply_Click"/>
+        <Button x:Name="button_divide" Content="/" Grid.Row="2"  Margin="240,60,0,0"  VerticalAlignment="Top" Height="49" Width="73" Click="button_divide_Click"/>
 
         <TextBox 
             IsReadOnly="True"
-            x:Name="textBox" HorizontalAlignment="Left" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Height="195" Width="337" Grid.Row="1" Margin="28,0,0,0"/>
-        <Button  x:Name="button_plus_Copy" Grid.Row="2" Content="+" Margin="28,81,0,0" Height="49" Width="73" VerticalAlignment="Top"/>
-        <Button  x:Name="button_plus_Copy1" Grid.Row="2" Content="+" Margin="127,81,0,0" Height="49" Width="73" VerticalAlignment="Top"/>
-        <Button  x:Name="button_plus_Copy2" Grid.Row="2" Content="+" Margin="213,81,0,0" Height="49" Width="73" VerticalAlignment="Top"/>
-        <Button  x:Name="button_plus_Copy3" Grid.Row="2" Content="+" Margin="28,150,0,0" VerticalAlignment="Top" Height="49" Width="73"/>
-        <Button  x:Name="button_plus_Copy4" Grid.Row="2" Content="+" Margin="127,150,0,0" VerticalAlignment="Top" Height="49" Width="73"/>
-        <Button  x:Name="button_plus_Copy5" Grid.Row="2" Content="+" Margin="213,150,0,0" VerticalAlignment="Top" Height="49" Width="73"/>
-        <Button  x:Name="button_plus_Copy6" Grid.Row="2" Content="+" Margin="36,223,0,0" VerticalAlignment="Top" Height="49" Width="73"/>
-        <Button  x:Name="button_plus_Copy7" Grid.Row="2" Content="+" Margin="140,223,0,0" VerticalAlignment="Top" Height="49" Width="73"/>
-        <Button  x:Name="button_plus_Copy8" Grid.Row="2" Content="+" Margin="236,223,0,0" VerticalAlignment="Top" Height="49" Width="73"/>
-        <Button  x:Name="button_plus_Copy9" Grid.Row="2" Content="+" Margin="23,288,0,0" VerticalAlignment="Top" Height="49" Width="73" Grid.RowSpan="2"/>
-        <Button  x:Name="button_plus_Copy10" Grid.Row="2" Content="+" Margin="127,288,0,0" VerticalAlignment="Top" Height="49" Width="73" Grid.RowSpan="2"/>
-        <Button  x:Name="button_plus_Copy11" Grid.Row="2" Content="+" Margin="223,288,0,0" VerticalAlignment="Top" Height="49" Width="73" Grid.RowSpan="2"/>
+            x:Name="textBox" HorizontalAlignment="Center" Text="" TextWrapping="Wrap" VerticalAlignment="Center" Margin="0,0,0,0" Height="80" Width="390" Grid.Row="1"/>
+        <Button  x:Name="button_seven" Grid.Row="2" Content="7" Margin="0,5,0,0" Height="49" Width="73" VerticalAlignment="Top" Click="button_seven_Click"/>
+        <Button  x:Name="button_eight" Grid.Row="2" Content="8" Margin="80,5,0,0" Height="49" Width="73" VerticalAlignment="Top" Click="button_eight_Click"/>
+        <Button  x:Name="button_nine" Grid.Row="2" Content="9" Margin="160,5,0,0" Height="49" Width="73" VerticalAlignment="Top" Click="button_nine_Click"/>
+        <Button  x:Name="button_four" Grid.Row="2" Content="4" Margin="0,60,0,0" VerticalAlignment="Top" Height="49" Width="73" Click="button_four_Click"/>
+        <Button  x:Name="button_five" Grid.Row="2" Content="5" Margin="80,60,0,0" VerticalAlignment="Top" Height="49" Width="73" Click="button_five_Click"/>
+        <Button  x:Name="button_six" Grid.Row="2" Content="6" Margin="160,60,0,0" VerticalAlignment="Top" Height="49" Width="73" Click="button_six_Click"/>
+        <Button  x:Name="button_one" Grid.Row="2" Content="1" Margin="0,120,0,0" VerticalAlignment="Top" Height="49" Width="73" Click="button_one_Click"/>
+        <Button  x:Name="button_two" Grid.Row="2" Content="2" Margin="80,120,0,0" VerticalAlignment="Top" Height="49" Width="73" Click="button_two_Click"/>
+        <Button  x:Name="button_three" Grid.Row="2" Content="3" Margin="160,120,0,0" VerticalAlignment="Top" Height="49" Width="73" Click="button_three_Click"/>
+        <Button  x:Name="button_bracket_left" Grid.Row="2" Content="(" Margin="0,180,0,0" VerticalAlignment="Top" Height="49" Width="73" Click="button_bracket_left_Click"/>
+        <Button  x:Name="button_zero" Grid.Row="2" Content="0" Margin="80,180,0,0" VerticalAlignment="Top" Height="49" Width="73" Click="button_zero_Click"/>
+        <Button  x:Name="button_bracket_right" Grid.Row="2" Content=")" Margin="160,180,0,0" VerticalAlignment="Top" Height="49" Width="73" Click="button_bracket_right_Click"/>
+        <Button  x:Name="button_minus" Grid.Row="2" Content="-" Margin="240,180,0,0" VerticalAlignment="Top" Height="49" Width="73" Click="button_minus_Click"/>
+        <Button  x:Name="button_answer" Grid.Row="2" Content="=" Margin="0,240,0,0" VerticalAlignment="Top" Height="49" Width="390" Click="button_answer_Click" HorizontalAlignment="Center"/>
+        <Button  x:Name="button_clear" Grid.Row="2" Content="Clear" Margin="320,5,0,0" Height="225" Width="73"  Click="button_clear_Click" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="10,26,0,0" Grid.Row="3" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Height="231" Width="376"/>
 
 
 
