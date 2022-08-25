@@ -31,8 +31,6 @@ namespace Calculator_UWP
         public MainPage()
         {
             this.InitializeComponent();
-            ApplicationView.PreferredLaunchViewSize = new Size { Height = 600, Width = 400 };
-            ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
         }
 
         private void Btn_plus(object sender, RoutedEventArgs e)
@@ -167,39 +165,31 @@ namespace Calculator_UWP
             double.TryParse(x, out num1);
             double.TryParse(y, out num2);
 
-            if (operation == '+')
+            switch (operation)
             {
-                result = num1 + num2;
-                textBox.Text = result.ToString();
-            }
-            else if (operation == '-')
-            {
-                result = num1 - num2;
-                textBox.Text = result.ToString();
-            }
-            else if (operation == '*')
-            {
-                result = num1 * num2;
-                textBox.Text = result.ToString();
-            }
-            else if (operation == '/')
-            {
-                if (num2 != 0)
-                {
+                case '+':
+                    result = num1 + num2;
+                    textBox.Text = result.ToString();
+                    break;
+                case  '-':
+                    result = num1 - num2;
+                    textBox.Text = result.ToString();
+                    break;
+                case '*':
+                    result = num1 * num2;
+                    textBox.Text = result.ToString();
+                    break;
+                case '/':
                     result = num1 / num2;
                     textBox.Text = result.ToString();
-                }
-                else
-                {
-                    textBox.Text = "DIV/Zero!";
-                }
+                    break;
+            }
 
             }
-        }
 
         private void button_clear_Click(object sender, RoutedEventArgs e)
         {
-            textBox.Text = "0";
+            textBox.Text = " ";
         }
     }
 }
