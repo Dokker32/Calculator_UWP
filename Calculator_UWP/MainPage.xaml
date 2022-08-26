@@ -7,15 +7,15 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Width="400"
-    Height="800"
+    Height="635"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <Grid Margin="0,0,0,0">
         <Grid.RowDefinitions>
             <RowDefinition Height="100"></RowDefinition>
             <RowDefinition Height="80"></RowDefinition>
-            <RowDefinition Height="350"></RowDefinition>
-            <RowDefinition Height="200"></RowDefinition>
+            <RowDefinition Height="300"></RowDefinition>
+            <RowDefinition Height="155"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
 
@@ -48,7 +48,7 @@
         <Button  x:Name="button_minus" Grid.Row="2" Content="-" Margin="240,180,0,0" VerticalAlignment="Top" Height="49" Width="73" Click="button_minus_Click"/>
         <Button  x:Name="button_answer" Grid.Row="2" Content="=" Margin="0,240,0,0" VerticalAlignment="Top" Height="49" Width="390" Click="button_answer_Click" HorizontalAlignment="Center"/>
         <Button  x:Name="button_clear" Grid.Row="2" Content="Clear" Margin="320,5,0,0" Height="225" Width="73"  Click="button_clear_Click" VerticalAlignment="Top"/>
-        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="10,26,0,0" Grid.Row="3" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Height="231" Width="376"/>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="0,5,0,0" Grid.Row="3" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="150" Width="400"/>
 
 
 

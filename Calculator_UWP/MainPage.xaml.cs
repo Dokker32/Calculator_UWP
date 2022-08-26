@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Windows.UI.ViewManagement;
+using Windows.ApplicationModel.Activation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -28,9 +29,13 @@ namespace Calculator_UWP
         string y = string.Empty;
         char operation;
         double result = 0.0;
+
+
         public MainPage()
         {
             this.InitializeComponent();
+            ApplicationView.PreferredLaunchViewSize = new Size(635, 400);
+            ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
         }
 
         private void Btn_plus(object sender, RoutedEventArgs e)
@@ -42,75 +47,68 @@ namespace Calculator_UWP
         {
             x = input;
             operation = '+';
-            input = string.Empty;
-        }
+            input = string.Empty; }
 
-        private void button_plus_Copy_Click(object sender, RoutedEventArgs e)
-        {
-            x = input;
-            operation = '+';
-            input = string.Empty;
-        }
 
         private void button_seven_Click(object sender, RoutedEventArgs e)
         {
-            this.textBox.Text = " ";
+            this.textBox.Text = "";
             input += "7";
             this.textBox.Text += input;
         }
 
         private void button_eight_Click(object sender, RoutedEventArgs e)
         {
-            this.textBox.Text = " ";
+            this.textBox.Text = "";
             input += "8";
             this.textBox.Text += input;
         }
 
         private void button_nine_Click(object sender, RoutedEventArgs e)
         {
-            this.textBox.Text = " ";
+            this.textBox.Text = "";
             input += "9";
             this.textBox.Text += input;
         }
 
         private void button_one_Click(object sender, RoutedEventArgs e)
         {
-            this.textBox.Text = " ";
+            this.textBox.Text = "";
             input += "1";
             this.textBox.Text += input;
         }
 
         private void button_two_Click(object sender, RoutedEventArgs e)
         {
-            this.textBox.Text = " ";
+            this.textBox.Text = "";
             input += "2";
             this.textBox.Text += input;
         }
 
         private void button_three_Click(object sender, RoutedEventArgs e)
         {
-            this.textBox.Text = " ";
+            this.textBox.Text = "";
             input += "3";
             this.textBox.Text += input;
         }
 
         private void button_four_Click(object sender, RoutedEventArgs e)
         {
-            this.textBox.Text = " ";
+            this.textBox.Text = "";
             input += "4";
             this.textBox.Text += input;
         }
 
         private void button_five_Click(object sender, RoutedEventArgs e)
         {
-            this.textBox.Text = " ";
+            this.textBox.Text = "";
             input += "5";
             this.textBox.Text += input;
         }
 
         private void button_six_Click(object sender, RoutedEventArgs e)
         {
-            this.textBox.Text = " ";
+            this.textBox.Text = "";
             input += "6";
             this.textBox.Text += input;
         }
@@ -124,7 +122,7 @@ namespace Calculator_UWP
 
         private void button_zero_Click(object sender, RoutedEventArgs e)
         {
-            this.textBox.Text = " ";
+            this.textBox.Text = "";
             input += "0";
             this.textBox.Text += input;
         }
@@ -165,33 +163,38 @@ namespace Calculator_UWP
             double.TryParse(x, out num1);
             double.TryParse(y, out num2);
 
+
+
             switch (operation)
             {
                 case '+':
                     result = num1 + num2;
                     textBox.Text = result.ToString();
+                    textBlock1.Text = num1 + "+" + num2 + "=" + result;
                     break;
-                case  '-':
+                case '-':
                     result = num1 - num2;
                     textBox.Text = result.ToString();
+                    textBlock1.Text = num1 + "-" + num2 + "=" + result;
                     break;
                 case '*':
                     result = num1 * num2;
                     textBox.Text = result.ToString();
+                    textBlock1.Text = num1 + "*" + num2 + "=" + result;
                     break;
                 case '/':
                     result = num1 / num2;
                     textBox.Text = result.ToString();
+                    textBlock1.Text = num1 + "/" + num2 + "=" + result;
                     break;
             }
-
-            }
-
-        private void button_clear_Click(object sender, RoutedEventArgs e)
-        {
-            textBox.Text = " ";
         }
+
+    private void button_clear_Click(object sender, RoutedEventArgs e)
+    {
+        textBox.Text = "";
     }
+}
 }
 
 
