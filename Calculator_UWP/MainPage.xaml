@@ -24,7 +24,7 @@
 
 
         <Image x:Name="image" Source ="IMG/1.png" Grid.Row="0" HorizontalAlignment="Left" Height="95" VerticalAlignment="Top" Width="140" Margin="0,5,0,0"/>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="140,5,0,0" Text="Стандартный калькулятор, Поддерживаемые операции +, -, *, /, ()" TextWrapping="Wrap" VerticalAlignment="Top" Height="95" Width="260"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="140,5,0,0" Text="Стандартный калькулятор, Поддерживаемые операции +, -, *, /" TextWrapping="Wrap" VerticalAlignment="Top" Height="95" Width="260" SelectionChanged="textBlock_SelectionChanged" FontSize="18"/>
 
         <Button  x:Name="button_plus" Grid.Row="2" Content="+" Margin="240,120,0,0" VerticalAlignment="Top" Height="49" Width="73" Click="button_plus_Click"/>
         <Button  x:Name="button_multiply" Content="*" Grid.Row="2"  Margin="240,5,0,0"  VerticalAlignment="Top" Height="49" Width="73" Click="button_multiply_Click"/>
@@ -32,7 +32,7 @@
 
         <TextBox 
             IsReadOnly="True"
-            x:Name="textBox" HorizontalAlignment="Center" Text="" TextWrapping="Wrap" VerticalAlignment="Center" Margin="0,0,0,0" Height="80" Width="390" Grid.Row="1"/>
+            x:Name="textBox" HorizontalAlignment="Center" Text="" TextWrapping="Wrap" VerticalAlignment="Center" Margin="0,0,0,0" Height="80" Width="400" Grid.Row="1"/>
         <Button  x:Name="button_seven" Grid.Row="2" Content="7" Margin="0,5,0,0" Height="49" Width="73" VerticalAlignment="Top" Click="button_seven_Click"/>
         <Button  x:Name="button_eight" Grid.Row="2" Content="8" Margin="80,5,0,0" Height="49" Width="73" VerticalAlignment="Top" Click="button_eight_Click"/>
         <Button  x:Name="button_nine" Grid.Row="2" Content="9" Margin="160,5,0,0" Height="49" Width="73" VerticalAlignment="Top" Click="button_nine_Click"/>
@@ -42,13 +42,11 @@
         <Button  x:Name="button_one" Grid.Row="2" Content="1" Margin="0,120,0,0" VerticalAlignment="Top" Height="49" Width="73" Click="button_one_Click"/>
         <Button  x:Name="button_two" Grid.Row="2" Content="2" Margin="80,120,0,0" VerticalAlignment="Top" Height="49" Width="73" Click="button_two_Click"/>
         <Button  x:Name="button_three" Grid.Row="2" Content="3" Margin="160,120,0,0" VerticalAlignment="Top" Height="49" Width="73" Click="button_three_Click"/>
-        <Button  x:Name="button_bracket_left" Grid.Row="2" Content="(" Margin="0,180,0,0" VerticalAlignment="Top" Height="49" Width="73" Click="button_bracket_left_Click"/>
-        <Button  x:Name="button_zero" Grid.Row="2" Content="0" Margin="80,180,0,0" VerticalAlignment="Top" Height="49" Width="73" Click="button_zero_Click"/>
-        <Button  x:Name="button_bracket_right" Grid.Row="2" Content=")" Margin="160,180,0,0" VerticalAlignment="Top" Height="49" Width="73" Click="button_bracket_right_Click"/>
+        <Button  x:Name="button_zero" Grid.Row="2" Content="0" Margin="5,180,0,0" VerticalAlignment="Top" Height="49" Width="228" Click="button_zero_Click"/>
         <Button  x:Name="button_minus" Grid.Row="2" Content="-" Margin="240,180,0,0" VerticalAlignment="Top" Height="49" Width="73" Click="button_minus_Click"/>
         <Button  x:Name="button_answer" Grid.Row="2" Content="=" Margin="0,240,0,0" VerticalAlignment="Top" Height="49" Width="390" Click="button_answer_Click" HorizontalAlignment="Center"/>
         <Button  x:Name="button_clear" Grid.Row="2" Content="Clear" Margin="320,5,0,0" Height="225" Width="73"  Click="button_clear_Click" VerticalAlignment="Top"/>
-        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="0,5,0,0" Grid.Row="3" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="150" Width="400"/>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="0,5,0,0" Grid.Row="3" Text="История операций" TextWrapping="Wrap" VerticalAlignment="Top" Height="150" Width="400" SelectionChanged="textBlock1_SelectionChanged"/>
 
 
 
